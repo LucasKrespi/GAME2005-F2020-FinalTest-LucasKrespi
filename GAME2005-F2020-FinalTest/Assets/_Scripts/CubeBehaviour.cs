@@ -60,6 +60,7 @@ public class CubeBehaviour : MonoBehaviour
     public bool debug;
     public List<Contact> contacts;
     public Vector3 collisionNormal;
+   
 
     private MeshFilter meshFilter;
     public Bounds bounds;

@@ -40,6 +40,7 @@ public class BulletBehaviour : MonoBehaviour
         max = Vector3.Scale(bounds.max, transform.localScale) + transform.position;
         min = Vector3.Scale(bounds.min, transform.localScale) + transform.position;
 
+
     }
 
     private void _Move()
@@ -61,7 +62,7 @@ public class BulletBehaviour : MonoBehaviour
         {
             Gizmos.color = Color.magenta;
 
-            Gizmos.DrawWireSphere(transform.position, radius);
+            Gizmos.DrawWireCube(transform.position, Vector3.Scale(new Vector3(1.0f, 1.0f, 1.0f), transform.localScale));
         }
     }
 }
