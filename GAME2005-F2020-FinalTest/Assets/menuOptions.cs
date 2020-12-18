@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuButtons : MonoBehaviour
+public class menuOptions : MonoBehaviour
 {
-    //Play Button
-    public void PlayButton()
+    // Start is called before the first frame update
+  public void Playbutton()
     {
         SceneManager.LoadScene(1);
     }

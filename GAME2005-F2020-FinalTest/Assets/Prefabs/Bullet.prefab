@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2898771445226466676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.408, y: 1.057, z: -2.122}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 1.39623, y: 1.04437, z: -2.12866}
+  m_LocalScale: {x: 0.076459244, y: 0.074743226, z: 0.08668173}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,10 +102,11 @@ MonoBehaviour:
   isColliding: 0
   collisionNormal: {x: 0, y: 0, z: 0}
   penetration: 0
+  size: {x: 0, y: 0, z: 0}
   max: {x: 0, y: 0, z: 0}
   min: {x: 0, y: 0, z: 0}
   contacts: []
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  bulletManager: {fileID: 2696502194287814886, guid: 63c32c04e2205824da0bf61984029ead, type: 3}
+  bulletManager: {fileID: 0}
