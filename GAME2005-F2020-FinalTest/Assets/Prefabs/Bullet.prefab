@@ -102,4 +102,10 @@ MonoBehaviour:
   isColliding: 0
   collisionNormal: {x: 0, y: 0, z: 0}
   penetration: 0
-  bulletManager: {fileID: 0}
+  max: {x: 0, y: 0, z: 0}
+  min: {x: 0, y: 0, z: 0}
+  contacts: []
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  bulletManager: {fileID: 2696502194287814886, guid: 63c32c04e2205824da0bf61984029ead, type: 3}

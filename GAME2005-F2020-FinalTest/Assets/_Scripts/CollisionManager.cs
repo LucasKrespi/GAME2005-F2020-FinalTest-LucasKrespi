@@ -48,7 +48,7 @@ public class CollisionManager : MonoBehaviour
             {
                 if (cube.name != "Player")
                 {
-                    CheckSphereAABB(sphere, cube);
+                    CheckSphereAABB(cube, sphere);
                 }
 
             }
@@ -56,7 +56,7 @@ public class CollisionManager : MonoBehaviour
 
     }
 
-    public static void CheckSphereAABB(BulletBehaviour a, CubeBehaviour b)
+    public static void CheckSphereAABB(CubeBehaviour a, BulletBehaviour b)
     {
         //// get box closest point to sphere center by clamping
         //var x = Mathf.Max(b.min.x, Mathf.Min(s.transform.position.x, b.max.x));
@@ -132,9 +132,9 @@ public class CollisionManager : MonoBehaviour
 
             // set the contact properties
             contactB.face = bulletface;
-            a.collisionNormal = bulletface;
+           
             contactB.penetration = penetration;
-            a.penetration = penetration;
+         
 
             // check if contact does not exist
             if (!a.contacts.Contains(contactB))
@@ -151,8 +151,10 @@ public class CollisionManager : MonoBehaviour
                
                 // add the new contact
                 a.contacts.Add(contactB);
-                //a.isColliding = true;
-                Reflect(a);
+                a.isColliding = true;
+                b.collisionNormal = bulletface;
+                Reflect(b);
+              
             }
         }
         else
@@ -161,8 +163,7 @@ public class CollisionManager : MonoBehaviour
             if (a.contacts.Exists(x => x.cube.gameObject.name == b.gameObject.name))
             {
                 a.contacts.Remove(a.contacts.Find(x => x.cube.gameObject.name.Equals(b.gameObject.name)));
-              //  a.isColliding = false;
-
+                a.isColliding = false;
             }
         }
     }
@@ -181,7 +182,6 @@ public class CollisionManager : MonoBehaviour
         {
             s.direction = new Vector3(s.direction.x, -s.direction.y, s.direction.z);
         }
-       // s.isColliding = false;
     }
 
 
@@ -290,6 +290,7 @@ public class CollisionManager : MonoBehaviour
             {
                 b.transform.position = new Vector3(a.transform.position.x - (b.size.z + 0.1f), b.transform.position.y +0.05f , a.transform.position.z);
             }
+           
         }
         
     }
